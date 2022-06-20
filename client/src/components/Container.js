@@ -1,20 +1,20 @@
 import React from "react";
-import { TOTAL_SCREENS } from "../utilities/commonUtils";
+import Navbar from "./NavBar/NavBar";
+import Component1 from "./Component1/Component1";
+import Component2 from "./Component2/Component2";
+import Component3 from "./Component3/Component3";
+import Component4 from "./Component4/Component4";
 
-export default function Container() {
-  const mapAllScreens = () => {
-    return TOTAL_SCREENS.map((screen) =>
-      screen.component ? (
-        <screen.component
-          screenName={screen.screen_name}
-          key={screen.screen_name}
-          id={screen.screen_name}
-        />
-      ) : (
-        <div key={screen.screen_name}></div>
-      )
-    );
-  };
+const Container = () => {
+  return (
+    <div className='app__container'>
+      <Navbar />
+      <Component1 id="component1" />
+      <Component2 id="component2" />
+      <Component3 id="component3" />
+      <Component4 id="component4" />
+    </div>
+  );
+};
 
-  return <div className='portfolio-container'>{mapAllScreens()}</div>;
-}
+export default Container;

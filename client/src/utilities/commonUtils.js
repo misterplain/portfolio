@@ -1,4 +1,4 @@
-import Header from "../components/Header/Header";
+import Header from "../components/NavBar/NavBar";
 import Component1 from "../components/Component1/Component1";
 import Component2 from "../components/Component2/Component2";
 import Component3 from "../components/Component3/Component3";

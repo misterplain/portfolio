@@ -2,7 +2,7 @@ import './Component2.css';
 
 const Component2 = () => {
     return (
-      <div className="component2__container">
+      <div className="component2__container" id="component2">
         <h1>Component 2</h1>
         <p>This is component 2</p>
       </div>
