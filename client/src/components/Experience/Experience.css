@@ -1,0 +1,27 @@
+.experience__container {
+    margin: 0;
+    padding: 0;
+    min-height: 250px;
+    border: 20px solid purple;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+
+
+/* .experience__background {
+    background: rgb(220, 216, 216);
+    display: flex;
+
+}
+
+.experience__container{
+    width: 95%;
+    height: 95%;
+    margin: 20px;
+    background: rgb(45, 82, 163);
+} */

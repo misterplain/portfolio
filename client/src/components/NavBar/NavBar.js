@@ -21,49 +21,49 @@ export default class Navbar extends Component {
             <li className='nav-item'>
               <Link
                 activeClass='active'
-                to='component1'
+                to='about'
                 spy={true}
                 smooth={true}
                 offset={-120}
                 duration={500}
               >
-                Component 1
+                About
               </Link>
             </li>
             <li className='nav-item'>
               <Link
                 activeClass='active'
-                to='component2'
+                to='experience'
                 spy={true}
                 smooth={true}
                 offset={-120}
                 duration={500}
               >
-                Component 2
+                Experience
               </Link>
             </li>
             <li className='nav-item'>
               <Link
                 activeClass='active'
-                to='component3'
+                to='portfolio'
                 spy={true}
                 smooth={true}
                 offset={-120}
                 duration={500}
               >
-                Component 3
+                Portfolio
               </Link>
             </li>
             <li className='nav-item'>
               <Link
                 activeClass='active'
-                to='component4'
+                to='contact'
                 spy={true}
                 smooth={true}
                 offset={-120}
                 duration={500}
               >
-                Component 4
+                Contact
               </Link>
             </li>
 
