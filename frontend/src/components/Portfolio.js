@@ -1,8 +1,9 @@
-import './Portfolio.css';
+import React from "react";
+
 
 const Portfolio = () => {
     return (
-      <div className="portfolio__container" id="portfolio">
+      <div className="component-container" id="portfolio">
         <h1>Portfolio</h1>
         <p>Portfolio Text</p>
       </div>

@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "./NavBar/NavBar";
-import AboutMe from "./AboutMe/AboutMe";
-import Experience from "./Experience/Experience";
-import Portfolio from "./Portfolio/Portfolio";
-import Component4 from "./Contact/Contact";
+import Navbar from "../components/NavBar";
+import AboutMe from "../components/AboutMe";
+import Experience from "../components/Experience";
+import Portfolio from "../components/Portfolio";
+import Component4 from "../components/Contact";
 
 const Container = () => {
   return (
