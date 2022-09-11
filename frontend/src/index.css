@@ -35,6 +35,7 @@ code {
 .component-container {
   margin: 0;
   padding: 0;
+  width: 100%;
   min-height: 250px;
   border: 5px solid rgba(99, 4, 146, 0.391);
   border-radius: 15px;
