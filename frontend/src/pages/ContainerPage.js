@@ -1,20 +1,29 @@
 import React from "react";
-import Navbar from "../components/NavBar";
+import NavbarComponent from "../components/NavBarComponent";
 import AboutMe from "../components/AboutMe";
 import Experience from "../components/Experience";
 import Portfolio from "../components/Portfolio";
-import Component4 from "../components/Contact";
+import Contact from "../components/Contact";
+import { Container, Row, Col } from "react-bootstrap";
 
-const Container = () => {
+const ContainerPage = () => {
   return (
-    <div className='app__container'>
-      <Navbar />
-      <AboutMe id='about' />
-      <Experience id='experience' />
-      <Portfolio id='portfolio' />
-      <Component4 id='component4' />
-    </div>
+    <Container>
+      <Row>
+        <Col xs={12}>
+        <NavbarComponent />
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={12}>
+          <AboutMe id='about' />
+          <Experience id='experience' />
+          <Portfolio id='portfolio' />
+          <Contact id='contact' />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
-export default Container;
+export default ContainerPage;

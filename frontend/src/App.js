@@ -1,11 +1,11 @@
 import React from "react";
-import Container from "./pages/ContainerPage";
+import ContainerPage from "./pages/ContainerPage";
 
 function App() {
   return (
-    <div className='App'>
-      <Container />
-    </div>
+    <>
+      <ContainerPage />
+    </>
   );
 }
 
