@@ -1,110 +1,170 @@
-import React, { useState, useEffect } from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
-import { Link, animateScroll as scroll } from "react-scroll";
-import { Row, Col } from "react-bootstrap";
+// import React, { useState, useEffect } from "react";
+// import { Container, Navbar, Nav } from "react-bootstrap";
+// import { Link, animateScroll as scroll } from "react-scroll";
+// import { Row, Col } from "react-bootstrap";
+// import NavDropdown from "react-bootstrap/NavDropdown";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "font-awesome/css/font-awesome.css";
+// import "bootstrap-social/bootstrap-social.css";
+import * as React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import MenuIcon from "@mui/icons-material/Menu";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
-const NavbarComponent = () => {
-  const scrollToTop = () => {
-    scroll.scrollToTop();
+import { createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+  
+  palette: {
+    primary: {
+      main: '#80cbc4',
+    },
+    secondary: {
+      main: '#689f38',
+    },
+  },
+  })
+
+
+const drawerWidth = 240;
+const navItems = ['about', 'projects', 'contact'];
+
+function DrawerAppBar(props) {
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
   };
 
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      {/* <Typography variant="h6" sx={{ my: 2 }}>
+        Patrick O'Brien
+      </Typography> */}
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }}>
+              <ListItemText primary={item} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
-  const navbarStyles = {
-    position: "fixed",
-    height: "50px",
-    width: "100%",
-    backgroundColor: "rgba(248, 248, 7, 0.129);",
-    textAlign: "center",
-    transition: "top 0.6s",
-    fontSize: "1.5em",
-  };
-
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    setVisible(
-      (prevScrollPos > currentScrollPos &&
-        prevScrollPos - currentScrollPos > 700) ||
-        currentScrollPos < 10
-    );
-    setPrevScrollPos(currentScrollPos);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos, visible, handleScroll]);
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Navbar
-      id='navbar'
-      style={{ ...navbarStyles, top: visible ? "0" : "-60px" }}
-    >
-      <Container
-        style={{
-          display: "flex",
-          marginLeft: "0px",
-          textAlign: "center",
-          justifyContent: "space-around",
-        }}
-      >
-        <Nav>
-          <Nav.Link>
-            <Link
-              activeClass='active'
-              to='about'
-              spy={true}
-              smooth={true}
-              offset={-120}
-              duration={500}
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              About
-            </Link>
-          </Nav.Link>
-
-          <Nav.Link>
-            <Link
-              activeClass='active'
-              to='experience'
-              spy={true}
-              smooth={true}
-              offset={-120}
-              duration={500}
-            >
-              Experience
-            </Link>
-          </Nav.Link>
-          <Nav.Link>
-            <Link
-              activeClass='active'
-              to='portfolio'
-              spy={true}
-              smooth={true}
-              offset={-120}
-              duration={500}
-            >
-              Portfolio
-            </Link>
-          </Nav.Link>
-
-          <Nav.Link>
-            <Link
-              activeClass='active'
-              to='contact'
-              spy={true}
-              smooth={true}
-              offset={-120}
-              duration={500}
-            >
-              Contact
-            </Link>{" "}
-          </Nav.Link>
-        </Nav>
-      </Container>
-    </Navbar>
+    <Box sx={{ display: 'flex' }}>
+      <AppBar component="nav" color="secondary">
+        <Toolbar >
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          >
+            PO
+          </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Button key={item} sx={{ color: '#fff' }}>
+                {item}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Box component="nav">
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </Box>
+      <Box component="main" sx={{ p: 0 }}>
+        <Toolbar />
+      </Box>
+    </Box>
   );
+}
+
+DrawerAppBar.propTypes = {
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
 };
 
-export default NavbarComponent;
+export default DrawerAppBar;
+
+
+
+
+
+
+
+
+
+// const NavbarComponent = (props) => {
+
+//   return (
+//     <>
+//       <Navbar bg='light' expand='sm' className='nav' >
+//         <Container className='nav-container'>
+//           <Navbar.Brand href='#home'>p.o.</Navbar.Brand>
+//           <Nav className='nav-items'>
+//             <Nav.Link className='nav-item' href='#home'>
+//               about
+//             </Nav.Link>
+//             <Nav.Link className='nav-item' href='#project'>
+//               projects
+//             </Nav.Link>
+//             <Nav.Link className='nav-item' href='#contact'>
+//               contact
+//             </Nav.Link>
+//           </Nav>
+//           <i className='fa fa-envelope'></i>
+//         </Container>
+//       </Navbar> */}
+
+//       {/* materiaul ui
+//     </>
+//   );
+// };
+
+// export default NavbarComponent;
