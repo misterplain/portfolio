@@ -39,7 +39,7 @@ const theme = createTheme({
 
 
 const drawerWidth = 240;
-const navItems = ['about', 'projects', 'contact'];
+const navItems = ['about','experience', 'projects', 'contact'];
 
 function DrawerAppBar(props) {
   const { window } = props;

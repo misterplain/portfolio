@@ -2,22 +2,25 @@ import React from "react";
 import NavbarComponent from "../components/NavBarComponent";
 import DrawerAppBar from "../components/NavBarComponent";
 import AboutMe from "../components/AboutMe";
-import Portfolio from "../components/Portfolio";
+import Experience from "../components/Experience";
+import Projects from "../components/Projects";
 import Contact from "../components/Contact";
-import { Container, Row, Col } from "react-bootstrap";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 
 const ContainerPage = () => {
   return (
     <Container>
-      <Row>
-        <Col xs={12} sm={12} md={12}>
+      <Grid container>
+        <Grid item xs={12}>
           <DrawerAppBar />
           <NavbarComponent />
           <AboutMe id='about' />
-          <Portfolio id='portfolio' />
+          <Experience id='experience' />
+          <Projects id='projects' />
           <Contact id='contact' />
-        </Col>
-      </Row>
+        </Grid>
+      </Grid>
     </Container>
   );
 };
