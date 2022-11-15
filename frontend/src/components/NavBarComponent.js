@@ -22,24 +22,29 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { Link } from "react-scroll";
 
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
-  
   palette: {
     primary: {
-      main: '#80cbc4',
+      main: "#80cbc4",
     },
     secondary: {
-      main: '#689f38',
+      main: "#689f38",
     },
   },
-  })
-
+});
 
 const drawerWidth = 240;
-const navItems = ['about','experience', 'projects', 'contact'];
+// const navItems = ["about", "experience", "projects", "contact"];
+const navItems = [
+  { id: 1, name: "about", link: "about" },
+  { id: 2, name: "experience", link: "experience" },
+  { id: 3, name: "projects", link: "projects" },
+  { id: 4, name: "contact", link: "contact" },
+];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -50,72 +55,94 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      {/* <Typography variant="h6" sx={{ my: 2 }}>
-        Patrick O'Brien
-      </Typography> */}
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
+          <Link
+            key={item.id}
+            // activeClass='active'
+            to={item.link}
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={handleDrawerToggle}
+          >
+            <ListItem disablePadding>
+              <ListItemButton sx={{ textAlign: "center" }}>
+                <ListItemText primary={item.name} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar component="nav" color="secondary">
-        <Toolbar >
+    <Box sx={{ display: "flex" }}>
+      <AppBar component='nav' color='secondary'>
+        <Toolbar>
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
+            color='inherit'
+            aria-label='open drawer'
+            edge='start'
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            variant='h6'
+            component='div'
+            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
             PO
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
+              <Button key={item.id} sx={{ color: "white", textDecoration: " none" }}>
+                <Link
+                  // activeClass='active'
+                  style={{ color: "white", textDecoration: " none" }}
+                  to={item.link}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-100}
+                  
+                >
+                  <Typography sx={{ color: "white", textDecoration: " none" }}> {item.name}</Typography>
+                </Link>
               </Button>
             ))}
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="nav">
+      <Box component='nav'>
         <Drawer
           container={container}
-          variant="temporary"
+          variant='temporary'
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 0 }}>
+      <Box component='main' sx={{ p: 0 }}>
         <Toolbar />
       </Box>
     </Box>
@@ -131,14 +158,6 @@ DrawerAppBar.propTypes = {
 };
 
 export default DrawerAppBar;
-
-
-
-
-
-
-
-
 
 // const NavbarComponent = (props) => {
 

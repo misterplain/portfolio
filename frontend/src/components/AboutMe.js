@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-// import { Row, Col, Container, Card } from "react-bootstrap";
-import { TypeAnimation } from "react-type-animation";
-import { Container, Grid, Typography, Card, CardMedia } from "@mui/material";
+import React from "react";
+import {  Grid, Typography, Card, CardMedia } from "@mui/material";
 
 const AboutMe = () => {
   // const [typingStatus, setTypingStatus] = useState("Initializing");
   return (
-    <Grid container alignItems="center" justifyContent="center">
-      <Grid item xs={12} sm={8} flex style={{border: '1px solid black'}}>
+    <Grid container alignItems="center" justifyContent="center" id="about" sx={{marginTop: '50px'}}>
+      <Grid item xs={12} sm={8} flex >
         <Typography variant='h2' component='h2' gutterBottom>
           Hi, I'm Patrick
         </Typography>

@@ -9,8 +9,8 @@ import Grid from "@mui/material/Grid";
 const Experience = () => {
   return (
     <>
-      <Grid container justifyContent='center' alignItems="center">
-        <Grid item xs={12} sm={11} flex style={{border: '1px solid red'}}>
+      <Grid container justifyContent='center' alignItems="center" id="experience" sx={{marginTop: '50px'}}>
+        <Grid item xs={12} sm={11} flex >
           <Typography variant='h2' component="h2" gutterBottom>Experience</Typography>
         </Grid>
         <Grid item xs={12} sm={10} md={8}>

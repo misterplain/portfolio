@@ -20,7 +20,7 @@ const projects = [
     githubRepo: "https://www.google.com",
   },
   {
-    id: 1,
+    id: 2,
     title: "Project Title 2",
     status: "Under Construction",
     description: "description of project 2",
@@ -31,8 +31,14 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Grid container justifyContent='center' alignItems='center'>
-      <Grid item xs={12} sm={11} flex style={{ border: "1px solid purple" }}>
+    <Grid
+      container
+      justifyContent='center'
+      alignItems='center'
+      id='projects'
+      sx={{ marginTop: "50px" }}
+    >
+      <Grid item xs={12} sm={11} flex>
         <Typography variant='h2' component='h2' gutterBottom>
           Projects
         </Typography>
@@ -50,8 +56,12 @@ const Projects = () => {
               <Typography variant='body2'>{project.description}</Typography>
             </CardContent>
             <CardActions>
-              <Button size='small'>Live Site</Button>
-              <Button size='small'>GitHub Repo</Button>
+              <Button href={project.liveSite} target='__blank' size='small'>
+                Live Site
+              </Button>
+              <Button href={project.githubRepo} target='__blank' size='small'>
+                GitHub Repo
+              </Button>
             </CardActions>
           </Card>
         ))}

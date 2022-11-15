@@ -16,8 +16,8 @@ import Link from "@mui/material/Link";
 
 const Contact = () => {
   return (
-    <Grid container justifyContent='center' alignItems='center'>
-      <Grid item xs={12} sm={11} flex style={{ border: "1px solid green" }}>
+    <Grid container justifyContent='center' alignItems='center' id="contact" sx={{marginTop: '50px'}}>
+      <Grid item xs={12} sm={11} flex >
         <Typography variant='h2' component='h2' gutterBottom>
           Contact
         </Typography>

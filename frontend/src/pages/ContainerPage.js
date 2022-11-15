@@ -14,11 +14,11 @@ const ContainerPage = () => {
       <Grid container>
         <Grid item xs={12}>
           <DrawerAppBar />
-          <NavbarComponent />
-          <AboutMe id='about' />
-          <Experience id='experience' />
-          <Projects id='projects' />
-          <Contact id='contact' />
+          {/* <NavbarComponent /> */}
+          <AboutMe/>
+          <Experience/>
+          <Projects/>
+          <Contact/>
         </Grid>
       </Grid>
     </Container>
