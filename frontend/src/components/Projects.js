@@ -13,19 +13,27 @@ import {
 const projects = [
   {
     id: 1,
-    title: "Project Title",
-    status: "Under Construction",
-    description: "description of project",
-    liveSite: "https://www.google.com",
-    githubRepo: "https://www.google.com",
+    title: "bcnMinimalista",
+    status: "Under Construction - task list in GitHub readme.md",
+    description: "bcnMin description",
+    liveSite: "https://bcnminimalista.onrender.com/",
+    githubRepo: "https://github.com/misterplain/bcnMin-v4",
   },
   {
     id: 2,
-    title: "Project Title 2",
-    status: "Under Construction",
-    description: "description of project 2",
-    liveSite: "https://www.google.com",
-    githubRepo: "https://www.google.com",
+    title: "Portfolio",
+    status: "Under Construction - task list in GitHub readme.md",
+    description: "Portfolio description",
+    liveSite: "https://patrickobrien.onrender.com/",
+    githubRepo: "https://github.com/misterplain/portfolio",
+  },
+  {
+    id: 3,
+    title: "MERN-Boilerplate",
+    status: "Under Construction - task list in GitHub readme.md",
+    description: "MERN-Boilerplate description",
+    liveSite: "https://mernboilerplate.onrender.com/",
+    githubRepo: "https://github.com/misterplain/boilerPlate",
   },
 ];
 
