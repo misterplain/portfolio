@@ -6,6 +6,7 @@ const AboutMe = () => {
   return (
     <Grid container alignItems="center" justifyContent="center" id="about" sx={{marginTop: '50px'}}>
       <Grid item xs={12} sm={8} flex >
+        <Typography variant="h3" style={{color: 'red'}}>Site/Projects Under Construction</Typography>
         <Typography variant='h2' component='h2' gutterBottom>
           Hi, I'm Patrick
         </Typography>

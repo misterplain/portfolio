@@ -50,6 +50,7 @@ const Projects = () => {
         <Typography variant='h2' component='h2' gutterBottom>
           Projects
         </Typography>
+        <Typography variant="h6" style={{color: 'red'}}>The free tier of Render, where I'm hosting my servers, will shut a server down after 15 mintues of inactivity, so please give my project load times some wiggleroom until I find a faster alternative :)</Typography>
       </Grid>
       <Grid item xs={12} sm={9}>
         {projects.map((project) => (
