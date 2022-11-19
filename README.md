@@ -27,6 +27,6 @@
 ###### Contact Section
 
 1. [ ]  Add subtitle
-2. [ ]  formik form validation and state, error handling
+2. [x]  formik form validation and state, error handling
 3. [ ]  modal confirming submission
-4. [ ]  emailjs to send email
+4. [ ]  nodemailer to send email

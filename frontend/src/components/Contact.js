@@ -1,4 +1,5 @@
 import React from "react";
+import axios from '../api/axios';
 import {
   Button,
   Fade,
@@ -46,7 +47,33 @@ const Contact = () => {
         <Formik
           initialValues={{ name: "", phoneNum: "", email: "", message: "" }}
           validationSchema={contactSchema}
-          onSubmit={(values) => console.log(values)}
+          onSubmit={async (values, { resetForm }) => {
+            try {
+              let data = {
+                name: values.name,
+                phoneNum: values.phoneNum,
+                email: values.email,
+                message: values.message,
+              };
+              // setBool(true);
+              const res = await axios.post("/contact", data);
+              if (
+                data.name.length === 0 ||
+                data.phoneNum.length === 0 ||
+                data.email.length === 0
+              ) {
+                console.log(res.data.message);
+                // setBool(false);
+              } else if (res.status === 200) {
+                console.log(res.data.message); 
+                // setBool(false);
+              }
+            } catch (error) {
+              console.log(error);
+            }
+
+            resetForm();
+          }}
         >
           {({
             handleSubmit,
@@ -133,7 +160,7 @@ const Contact = () => {
               </FormGroup>
 
               <Button type='submit' variant="outlined" color="secondary" style={{ marginBottom: '20px' }}>
-                Submit feedback
+                Send Message
               </Button>
             </form>
           )}

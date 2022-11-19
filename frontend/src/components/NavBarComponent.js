@@ -1,12 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import { Container, Navbar, Nav } from "react-bootstrap";
-// import { Link, animateScroll as scroll } from "react-scroll";
-// import { Row, Col } from "react-bootstrap";
-// import NavDropdown from "react-bootstrap/NavDropdown";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "font-awesome/css/font-awesome.css";
-// import "bootstrap-social/bootstrap-social.css";
 import * as React from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
