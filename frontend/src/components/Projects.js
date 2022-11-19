@@ -15,7 +15,8 @@ const projects = [
     id: 1,
     title: "bcnMinimalista",
     status: "Under Construction - task list in GitHub readme.md",
-    description: "bcnMin description",
+    description:
+      "Full stack MERN app - A platform for Barcelona locals to engage with their community and learn about waste reduction. React-Bootstrap used for UI, Yup and Formik used for form validation, Nodemail used for contact forms, Redux used for state management, JWT user authentication",
     liveSite: "https://bcnminimalista.onrender.com/",
     githubRepo: "https://github.com/misterplain/bcnMin-v4",
   },
@@ -23,15 +24,15 @@ const projects = [
     id: 2,
     title: "Portfolio",
     status: "Under Construction - task list in GitHub readme.md",
-    description: "Portfolio description",
-    liveSite: "https://patrickobrien.onrender.com/",
+    description: "Full stack MERN app - Nodemailer and Node.js / Express used for Contact form",
+    // liveSite: "https://patrickobrien.onrender.com/",
     githubRepo: "https://github.com/misterplain/portfolio",
   },
   {
     id: 3,
     title: "MERN-Boilerplate",
     status: "Under Construction - task list in GitHub readme.md",
-    description: "MERN-Boilerplate description",
+    description: "A full stack MERN Boiler plate with built-in JWT authentication, Redux state management, Nodemailer contact functionality, and React-Bootstrap compatibility",
     liveSite: "https://mernboilerplate.onrender.com/",
     githubRepo: "https://github.com/misterplain/boilerPlate",
   },
@@ -47,10 +48,16 @@ const Projects = () => {
       sx={{ marginTop: "50px" }}
     >
       <Grid item xs={12} sm={11} flex>
-        <Typography variant='h2' component='h2' gutterBottom>
+        <Typography variant='h2' component='h2'>
           Projects
         </Typography>
-        <Typography variant="h6" style={{color: 'red'}}>The free tier of Render, where I'm hosting my servers, will shut a server down after 15 mintues of inactivity, so please give my project load times some wiggleroom until I find a faster alternative :)</Typography>
+      </Grid>
+      <Grid item xs={8} justifyContent='center' sx={{ textAlign: "center" }}>
+        <Typography style={{ color: "purple" }}>
+          The free tier of Render, where I'm hosting my servers, will shut a
+          server down after 15 mintues of inactivity, so please give my project
+          load times some wiggleroom until I find a faster alternative :)
+        </Typography>
       </Grid>
       <Grid item xs={12} sm={9}>
         {projects.map((project) => (
@@ -65,9 +72,12 @@ const Projects = () => {
               <Typography variant='body2'>{project.description}</Typography>
             </CardContent>
             <CardActions>
-              <Button href={project.liveSite} target='__blank' size='small'>
-                Live Site
-              </Button>
+              {project.liveSite ? (
+                <Button href={project.liveSite} target='__blank' size='small'>
+                  Live Site
+                </Button>
+              ) : null}
+
               <Button href={project.githubRepo} target='__blank' size='small'>
                 GitHub Repo
               </Button>

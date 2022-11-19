@@ -41,7 +41,7 @@ const drawerWidth = 240;
 // const navItems = ["about", "experience", "projects", "contact"];
 const navItems = [
   { id: 1, name: "about", link: "about" },
-  { id: 2, name: "experience", link: "experience" },
+  // { id: 2, name: "experience", link: "experience" },
   { id: 3, name: "projects", link: "projects" },
   { id: 4, name: "contact", link: "contact" },
 ];

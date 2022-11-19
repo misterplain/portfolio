@@ -14,9 +14,8 @@ const ContainerPage = () => {
       <Grid container>
         <Grid item xs={12}>
           <DrawerAppBar />
-          {/* <NavbarComponent /> */}
           <AboutMe/>
-          <Experience/>
+          {/* <Experience/> */}
           <Projects/>
           <Contact/>
         </Grid>
