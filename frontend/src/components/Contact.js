@@ -1,5 +1,5 @@
-import React from "react";
-import axios from '../api/axios';
+import React, { useState } from "react";
+import axios from "../api/axios";
 import {
   Button,
   Fade,
@@ -10,10 +10,24 @@ import {
   FormControlLabel,
   FormControl,
   Grid,
+  Modal,
 } from "@mui/material";
 import Link from "@mui/material/Link";
 import { Formik } from "formik";
 import * as Yup from "yup";
+
+//modal style
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
 const contactSchema = Yup.object({
   name: Yup.string()
@@ -23,13 +37,19 @@ const contactSchema = Yup.object({
     9,
     "Phone number should have more than 9 characters, please include country code"
   ),
-  email: Yup.string().min(3, "Too short"),
+  email: Yup.string()
+    .min(3, "Too short")
+    .required("Required"),
   message: Yup.string()
     .min(2, "You can do better than that")
     .required("Required"),
 });
 
 const Contact = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const handleOpen = () => setOpenModal(true);
+  const handleClose = () => setOpenModal(false);
+
   return (
     <Grid
       container
@@ -65,13 +85,13 @@ const Contact = () => {
                 console.log(res.data.message);
                 // setBool(false);
               } else if (res.status === 200) {
-                console.log(res.data.message); 
+                console.log(res.data.message);
                 // setBool(false);
               }
             } catch (error) {
               console.log(error);
             }
-
+            handleOpen();
             resetForm();
           }}
         >
@@ -84,7 +104,7 @@ const Contact = () => {
             errors,
             touched,
           }) => (
-            <form onSubmit={handleSubmit} style={{ textAlign: 'center' }}>
+            <form onSubmit={handleSubmit} style={{ textAlign: "center" }}>
               <FormGroup>
                 <FormControlLabel
                   control={
@@ -158,14 +178,33 @@ const Contact = () => {
                   sx={{ m: 1.5 }}
                 />
               </FormGroup>
-
-              <Button type='submit' variant="outlined" color="secondary" style={{ marginBottom: '20px' }}>
+              <Button
+                type='submit'
+                variant='outlined'
+                color='secondary'
+                style={{ marginBottom: "20px" }}
+              >
                 Send Message
-              </Button>
+              </Button>{" "}
             </form>
           )}
         </Formik>
       </Grid>
+      <Modal
+        open={openModal}
+        onClose={handleClose}
+        aria-labelledby='modal-modal-title'
+        aria-describedby='modal-modal-description'
+      >
+        <Box sx={style}>
+          <Typography id='modal-modal-title' variant='h6' component='h2'>
+            Thank you!
+          </Typography>
+          <Typography id='modal-modal-description' sx={{ mt: 2 }}>
+            Message sent successfully
+          </Typography>
+        </Box>
+      </Modal>
     </Grid>
   );
 };
