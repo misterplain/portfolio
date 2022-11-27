@@ -24,15 +24,26 @@ const projects = [
     id: 2,
     title: "Portfolio",
     status: "Under Construction - task list in GitHub readme.md",
-    description: "Full stack MERN app - Nodemailer and Node.js / Express used for Contact form",
+    description:
+      "Full stack MERN app - Nodemailer and Node.js / Express used for Contact form",
     // liveSite: "https://patrickobrien.onrender.com/",
     githubRepo: "https://github.com/misterplain/portfolio",
   },
   {
     id: 3,
+    title: "HP Notepad",
+    status: "Under Construction - task list in GitHub readme.md",
+    description:
+      "A notepad tool for myself and my colleagues to dynamically create email templates on the fly",
+    liveSite: "https://hpnotepad.onrender.com/",
+    githubRepo: "https://github.com/misterplain/hpNotePad",
+  },
+  {
+    id: 4,
     title: "MERN-Boilerplate",
     status: "Under Construction - task list in GitHub readme.md",
-    description: "A full stack MERN Boiler plate with built-in JWT authentication, Redux state management, Nodemailer contact functionality, and React-Bootstrap compatibility",
+    description:
+      "A full stack MERN Boiler plate with built-in JWT authentication, Redux state management, Nodemailer contact functionality, and React-Bootstrap compatibility",
     liveSite: "https://mernboilerplate.onrender.com/",
     githubRepo: "https://github.com/misterplain/boilerPlate",
   },
