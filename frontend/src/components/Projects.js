@@ -40,6 +40,15 @@ const projects = [
   },
   {
     id: 4,
+    title: "Data Structures and Algorithms Notepad", 
+    status: "Under Construction",
+    description:
+      "A notepad I'm keeping to track of my studies of data structures and algorithms",
+    liveSite: "https://datastructuresandalgorithms.onrender.com",
+    githubRepo: "https://github.com/misterplain/DataStructures-Algorithms",
+  },
+  {
+    id: 5,
     title: "MERN-Boilerplate",
     status: "Under Construction - task list in GitHub readme.md",
     description:
