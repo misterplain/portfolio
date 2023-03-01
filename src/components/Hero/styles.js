@@ -5,6 +5,7 @@ const styles = {
     alignItems: "center",
     position: "relative",
     padding: "15px 15px",
+    marginBottom: "50px",
     [theme.breakpoints.up("sm")]: {
       display: "flex",
       flexDirection: "row",

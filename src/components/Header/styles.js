@@ -12,6 +12,7 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
+    padding: "0 15px",
   }),
   homeButton: (theme) => ({
     fontSize: "16px",

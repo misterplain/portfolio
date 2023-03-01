@@ -7,14 +7,20 @@ import { Link } from "@mui/material";
 
 import styles from "./styles";
 import computer from "../../assets/computer.jpg";
+import dev_computer from "../../assets/dev_computer.jpg";
 
 const Hero = () => {
   return (
     <Box sx={styles.wrapper}>
       <Box sx={styles.textWrapper}>
-        <Typography marginBottom>Developer</Typography>
-        <Typography variant="h2" marginBottom>Patrick O'Brien</Typography>
-        <Typography variant="body1" sx={styles.aboutMe} marginBottom>Hi, I'm Patrick, a Barcelona-based web developer and I'm passionate about creating engaging, user-friendly applications.</Typography>
+        <Typography variant='h2' marginBottom>
+          Patrick O'Brien
+        </Typography>{" "}
+        <Typography variant="body2" marginBottom>Developer</Typography>
+        <Typography variant='body1' sx={styles.aboutMe} marginBottom>
+          Hi, I'm Patrick, a Barcelona-based web developer and I'm passionate
+          about creating engaging, user-friendly applications.
+        </Typography>
         <Link
           component={NavLink}
           to='/contact'
