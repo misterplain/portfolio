@@ -96,26 +96,26 @@ const theme = createTheme({
     //     },
     //   },
     // },
-    // MuiOutlinedInput: {
-    //   styleOverrides: {
-    //     notchedOutline: {
-    //       border: "0.5px solid #777FEB",
-    //     },
-    //     root: {
-    //       borderRadius: "8px",
-    //       color: "#000",
-    //       fontSize: "16px",
-    //       lineHeight: "20px",
-    //       fontWeight: 500,
-    //       "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-    //         border: "2px solid #777FEB",
-    //       },
-    //       "&:hover .MuiOutlinedInput-notchedOutline": {
-    //         border: "2px solid #777FEB",
-    //       },
-    //     },
-    //   },
-    // },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        notchedOutline: {
+          border: "0.5px solid #777FEB",
+        },
+        root: {
+          borderRadius: "8px",
+          color: "#000",
+          fontSize: "16px",
+          lineHeight: "20px",
+          fontWeight: 500,
+          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            border: "2px solid #777FEB",
+          },
+          "&:hover .MuiOutlinedInput-notchedOutline": {
+            border: "2px solid #777FEB",
+          },
+        },
+      },
+    },
   },
 });
 

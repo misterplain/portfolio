@@ -72,7 +72,7 @@ const Footer = () => {
           <Box sx={styles.link}>Contact</Box>
         </Link>
       </Box>
-      <Box sx={styles.captionText}>Web Developer 2023</Box>
+      {/* <Box sx={styles.captionText}>Web Developer 2023</Box> */}
     </Box>
   );
 };

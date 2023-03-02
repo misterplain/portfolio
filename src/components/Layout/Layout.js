@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
         <Header />
         <main>{children}</main>
         <Footer />
-        <ComponentsTest />
+        {/* <ComponentsTest /> */}
       </Grid>
     </Grid>
   );

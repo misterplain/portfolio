@@ -34,16 +34,13 @@ const ContactForm = () => {
   const [responseMessage, setResponseMessage] = useState("");
   return (
     <Box sx={styles.wrapper}>
-      <Box sx={styles.message}>
-        <Typography>{responseMessage}</Typography>
-      </Box>
       <Box>
         {" "}
         <Formik
           initialValues={{ name: "", email: "", message: "" }}
           validationSchema={contactSchema}
           onSubmit={async (values, { resetForm }) => {
-            console.log(values)
+            console.log(values);
             try {
               let data = {
                 name: values.name,
@@ -70,8 +67,6 @@ const ContactForm = () => {
             } catch (error) {
               setResponseMessage("Message Failed to Send");
             }
-
-           
           }}
         >
           {({
@@ -83,13 +78,14 @@ const ContactForm = () => {
             errors,
             touched,
           }) => (
-            <form onSubmit={handleSubmit} >
-              {/* <Box sx={styles.formWrapper}> */}
+            <form onSubmit={handleSubmit}>
+              <Box sx={styles.formWrapper}>
                 {" "}
                 <FormGroup sx={styles.formGroup}>
                   <FormControlLabel
                     control={
                       <TextField
+                      size="small"
                         name='name'
                         label='Name'
                         variant='outlined'
@@ -105,6 +101,7 @@ const ContactForm = () => {
                   <FormControlLabel
                     control={
                       <TextField
+                      size="small"
                         type='textarea'
                         name='email'
                         label='Email address'
@@ -121,6 +118,7 @@ const ContactForm = () => {
                   <FormControlLabel
                     control={
                       <TextField
+                      size="small"
                         type='textarea'
                         name='message'
                         label='Enter your message here'
@@ -136,18 +134,18 @@ const ContactForm = () => {
                     }
                   />
                 </FormGroup>{" "}
-                {/* <Button variant='primary' type='submit'>
-                  Send
-                </Button> */}
-              {/* </Box> */}
+                <Box sx={styles.message}>
+                  <Typography>{responseMessage}</Typography>
+                </Box>
                 <Button
-                    variant='contained'
-                    type='submit'
-                    sx={styles.button}
-                    disabled={!isValid}
-                    >
-                    Send
-                </Button>
+                  variant='contained'
+                  type='submit'
+                  sx={styles.button}
+                  disabled={!isValid}
+                >
+                  Send
+                </Button>{" "}
+              </Box>
             </form>
           )}
         </Formik>
