@@ -11,6 +11,9 @@ const styles = {
       flexDirection: "row",
       width: "100%",
     },
+    [theme.breakpoints.up("md")]: {
+      marginTop: '40px'
+    }
   }),
   textWrapper: (theme) => ({
     display: "flex",
