@@ -4,6 +4,8 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Button from "../../components/Button/Button";
 import Project from "../../components/Project/Project";
+import { NavLink } from "react-router-dom";
+import { Link } from "@mui/material";
 
 import styles from "./styles";
 
@@ -46,8 +48,16 @@ const Projects = () => {
         ))}
       </Grid>
       <Box sx={styles.buttonWrapper}>
-        {" "}
-        <Button sx={styles.button}>See All Projects</Button>
+        <Link
+          component={NavLink}
+          to='/projects'
+          style={({ isActive }) =>
+            isActive ? { color: "#777FEB" } : undefined
+          }
+          sx={{ textDecoration: "none" }}
+        >
+          <Button sx={styles.button}>See All Projects</Button>
+        </Link>
       </Box>
     </Box>
   );

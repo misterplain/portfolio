@@ -17,6 +17,7 @@ const Layout = ({ children }) => {
         md={10}
         sx={{
           // border: "1px solid blue",
+          
         }}
       >
         <Header />

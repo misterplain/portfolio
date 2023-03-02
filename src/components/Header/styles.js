@@ -19,7 +19,8 @@ const styles = {
   }),
   rightWrapper: (theme) => ({
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    // justifyContent: "flex-start"
   }),
   project: (theme) => ({
     fontSize: "16px",
