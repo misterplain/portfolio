@@ -14,6 +14,15 @@ const theme = createTheme({
     purple: {
       main: "#5222D0",
     },
+    greyGreen:{
+      main: "#203239"
+    },
+    lightGreen: {
+      main:"#d4f2e3"
+    },
+    turquoise:{
+      main: "#57dba4"
+    }
   },
   typography: {
     h2: {
@@ -67,6 +76,26 @@ const theme = createTheme({
   },
   components: {
     // Name of the component
+    // MuiOutlinedInput: {
+    //   styleOverrides: {
+    //     notchedOutline: {
+    //       border: "0.5px solid #777FEB",
+    //     },
+    //     root: {
+    //       borderRadius: "8px",
+    //       color: "#000",
+    //       fontSize: "16px",
+    //       lineHeight: "20px",
+    //       fontWeight: 500,
+    //       "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+    //         border: "2px solid #777FEB",
+    //       },
+    //       "&:hover .MuiOutlinedInput-notchedOutline": {
+    //         border: "2px solid #777FEB",
+    //       },
+    //     },
+    //   },
+    // },
     MuiOutlinedInput: {
       styleOverrides: {
         notchedOutline: {
