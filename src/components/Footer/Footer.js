@@ -16,7 +16,7 @@ const Footer = () => {
     <Box sx={styles.wrapper}>
       <Box sx={styles.iconsWrapper}>
         <Link
-          href='https://www.google.com'
+          href='https://github.com/misterplain'
           target='_blank'
           rel='noopener'
           sx={{ textDecoration: "none" }}
@@ -31,7 +31,7 @@ const Footer = () => {
           </Box>
         </Link>
         <Link
-          href='https://www.google.com'
+          href='mailto:obrienp2321@gmail.com'
           target='_blank'
           rel='noopener'
           sx={{ textDecoration: "none" }}
@@ -45,7 +45,7 @@ const Footer = () => {
           </Box>
         </Link>
         <Link
-          href='https://www.google.com'
+          href='https://www.linkedin.com/in/patrick-o-brien-6743b044/'
           target='_blank'
           rel='noopener'
           sx={{ textDecoration: "none" }}
