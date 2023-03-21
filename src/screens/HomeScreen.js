@@ -3,12 +3,12 @@ import Hero from "../components/Hero/Hero";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Projects from "../components/Projects/Projects";
 
-const HomeScreen = () => {
+const HomeScreen = ({isDarkMode}) => {
   return (
     <>
-      <Hero />
-      <AboutMe />
-      <Projects />
+      <Hero isDarkMode={isDarkMode}/>
+      <AboutMe isDarkMode={isDarkMode}/>
+      <Projects isDarkMode={isDarkMode}/>
     </>
   );
 };

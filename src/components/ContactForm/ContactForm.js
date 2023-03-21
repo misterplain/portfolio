@@ -30,7 +30,7 @@ const contactSchema = Yup.object({
     .required("Required"),
 });
 
-const ContactForm = () => {
+const ContactForm = ({isDarkMode}) => {
   const [responseMessage, setResponseMessage] = useState("");
   return (
     <Box sx={styles.wrapper}>
@@ -142,6 +142,7 @@ const ContactForm = () => {
                   type='submit'
                   sx={styles.button}
                   disabled={!isValid}
+              
                 >
                   Send
                 </Button>{" "}

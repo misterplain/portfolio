@@ -15,7 +15,7 @@ const styles = {
       marginTop: '40px'
     }
   }),
-  textWrapper: (theme) => ({
+  textWrapper: (theme, isDarkMode) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import Button from "./components/Button/Button";
 
-const ComponentsTest = () => {
+const ComponentsTest = ({isDarkMode}) => {
   return (
     <>
       <Typography variant="h2">Heading 2 example</Typography>
@@ -14,7 +14,7 @@ const ComponentsTest = () => {
       <Typography variant="body1">Body 1 Example</Typography>
       <Typography variant="body2">Body 2 Example</Typography>
       <Typography variant="button">Example Typography</Typography><br></br>
-      <Button>Example styled Button</Button>
+      <Button isDarkMod={isDarkMode}>Example styled Button</Button>
 
     </>
   );

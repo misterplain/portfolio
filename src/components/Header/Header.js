@@ -2,15 +2,34 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "../../components/Button/Button";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Switch from "@mui/material/Switch";
+
 //routing
 import { NavLink } from "react-router-dom";
 import { Link } from "@mui/material";
+//theme
+import { BsGithub } from "react-icons/bs";
+import { RxMoon } from "react-icons/rx";
+import { BsSun } from "react-icons/bs";
 
 import styles from "./styles";
+import { useTheme } from "@mui/material/styles";
+// import { makeStyles } from '@mui/styles';
 
-const Header = () => {
+const Header = ({ toggleDarkMode, isDarkMode }) => {
+  const theme = useTheme();
+  // console.log(theme);
+
+  const handleChange = () => {
+    toggleDarkMode();
+    // console.log("accessed fro header.js");
+    // console.log(isDarkMode)
+    //  console.log(theme)
+  };
   return (
-    <Box sx={styles.wrapper}>
+    <Box sx={styles.wrapper(theme, isDarkMode)}>
       <Link
         component={NavLink}
         to='/'
@@ -21,7 +40,26 @@ const Header = () => {
           Home
         </Typography>
       </Link>
-      <Box sx={styles.rightWrapper}>
+      <Box sx={styles.rightWrapper(theme, isDarkMode)}>
+        <FormGroup
+        >
+          <FormControlLabel
+            control={
+              <Switch
+                checked={isDarkMode}
+                onChange={handleChange}
+                color='secondary'
+              />
+            }
+            label={
+              !isDarkMode ? (
+                <RxMoon style={styles.modeIcon(theme, isDarkMode)} />
+              ) : (
+                <BsSun style={styles.modeIcon(theme, isDarkMode)} />
+              )
+            }
+          />
+        </FormGroup>
         <Link
           component={NavLink}
           to='/projects'
@@ -43,7 +81,7 @@ const Header = () => {
           }
           sx={{ textDecoration: "none" }}
         >
-          <Button sx={styles.contact}>Contact</Button>
+          <Button sx={styles.contact} isDarkMode={isDarkMode}>Contact</Button>
         </Link>
       </Box>
     </Box>

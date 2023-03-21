@@ -10,7 +10,7 @@ import projects from "../../assets/projects";
 
 import styles from "./styles";
 
-const Projects = () => {
+const Projects = ({isDarkMode}) => {
   return (
     <Box sx={styles.wrapper}>
       <Typography sx={styles.title} variant='body1' marginBottom>
@@ -83,7 +83,7 @@ const Projects = () => {
           }
           sx={{ textDecoration: "none" }}
         >
-          <Button sx={styles.button}>See All Projects</Button>
+          <Button isDarkMode={isDarkMode} sx={styles.button}>See All Projects</Button>
         </Link>
       </Box>
     </Box>

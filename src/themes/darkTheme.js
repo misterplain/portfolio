@@ -3,10 +3,17 @@ import createBreakpoints from "@mui/system/createTheme/createBreakpoints";
 
 const breakpoints = createBreakpoints({});
 
-const theme = createTheme({
+const darkTheme = createTheme({
   palette: {
+    mode: "dark",
+    // backgroundColor: {
+    //   default: "#10273d",
+    // },
     primary: {
       main: "#686868",
+    },
+    secondary: {
+      main: "#777FEB",
     },
     slateBlue: {
       main: "#777FEB",
@@ -14,15 +21,28 @@ const theme = createTheme({
     purple: {
       main: "#5222D0",
     },
-    greyGreen:{
-      main: "#203239"
+    greyGreen: {
+      main: "#203239",
     },
     lightGreen: {
-      main:"#d4f2e3"
+      main: "#d4f2e3",
     },
-    turquoise:{
-      main: "#57dba4"
-    }
+    turquoise: {
+      main: "#57dba4",
+      secondary: "#27b783",
+    },
+    cobalt: {
+      main: "#0f728c",
+    },
+    darkBlue: {
+      main: "#10273d",
+    },
+    background: {
+      default: "#10273d",
+    },
+    black: {
+      main: "#000000",
+    },
   },
   typography: {
     h2: {
@@ -30,7 +50,7 @@ const theme = createTheme({
       fontWeight: 600,
       fontSize: "40px",
       lineHeight: "55px",
-      color: "#5222D0",
+      color: "#d4f2e3",
       [breakpoints.up("md")]: {
         fontWeight: 500,
         fontSize: "55px",
@@ -50,7 +70,7 @@ const theme = createTheme({
       fontWeight: 400,
       fontSize: "16px",
       lineHeight: "24px",
-      color: "#686868",
+      color: "#57dba4",
       [breakpoints.up("lg")]: {
         fontSize: "18px",
         lineHeight: "27px",
@@ -62,7 +82,7 @@ const theme = createTheme({
       fontWeight: 400,
       fontSize: "14px",
       lineHeight: "21px",
-      color: "#686868",
+      color: "#57dba4",
       [breakpoints.up("lg")]: {
         fontSize: "16px",
         lineHeight: "24px",
@@ -119,4 +139,4 @@ const theme = createTheme({
   },
 });
 
-export default theme;
+export default darkTheme;

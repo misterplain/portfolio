@@ -6,7 +6,7 @@ import { Link } from "@mui/material";
 
 import styles from "./styles";
 
-const Project = ({ project }) => {
+const Project = ({ project, isDarkMode }) => {
   return (
     <Box sx={styles.wrapper}>
       <Box sx={styles.imageWrapper}>
@@ -32,7 +32,7 @@ const Project = ({ project }) => {
           rel='noopener'
           sx={{ textDecoration: "none" }}
         >
-          <ButtonSmall>Live Site</ButtonSmall>
+          <ButtonSmall isDarkMode={isDarkMode}>Live Site</ButtonSmall>
         </Link>
         <Link
           href={project.githubRepo}
@@ -40,7 +40,7 @@ const Project = ({ project }) => {
           rel='noopener'
           sx={{ textDecoration: "none", marginLeft: "10px" }}
         >
-          <ButtonSmall>Github</ButtonSmall>
+          <ButtonSmall isDarkMode={isDarkMode}>Github</ButtonSmall>
         </Link>
       </Box>
     </Box>

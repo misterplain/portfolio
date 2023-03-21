@@ -25,7 +25,7 @@ const styles = {
 }
 
 
-const ProjectsScreen = () => {
+const ProjectsScreen = ({isDarkTheme}) => {
   return (
     <Box sx={styles.wrapper}>
       <Typography sx={styles.title} variant='body1' marginBottom>
@@ -34,7 +34,7 @@ const ProjectsScreen = () => {
       <Grid container spacing={2}>
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Project project={project} />
+            <Project project={project} isDarkTheme={isDarkTheme} />
           </Grid>
         ))}
       </Grid>

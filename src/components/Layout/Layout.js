@@ -4,11 +4,11 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import ComponentsTest from "../../componentstest"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, toggleDarkMode, isDarkMode }) => {
   return (
     <Grid
       container
-      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      sx={{ display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: isDarkMode ? "#10273d" : "white" }}
     >
       <Grid
         item
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
           
         }}
       >
-        <Header />
+        <Header toggleDarkMode={toggleDarkMode}/>
         <main>{children}</main>
         <Footer />
         {/* <ComponentsTest /> */}
