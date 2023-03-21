@@ -33,14 +33,17 @@ const Project = ({ project }) => {
         {project.description}
       </Typography>
       <Box sx={styles.linksWrapper(theme, isDarkMode)}>
-        <Link
-          href={project.link}
-          target='_blank'
-          rel='noopener'
-          sx={{ textDecoration: "none" }}
-        >
-          <ButtonSmall isDarkMode={isDarkMode}>Live Site</ButtonSmall>
-        </Link>
+        {project.link && (
+          <Link
+            href={project.link}
+            target='_blank'
+            rel='noopener'
+            sx={{ textDecoration: "none" }}
+          >
+            <ButtonSmall isDarkMode={isDarkMode}>Live Site</ButtonSmall>
+          </Link>
+        )}
+
         <Link
           href={project.githubRepo}
           target='_blank'

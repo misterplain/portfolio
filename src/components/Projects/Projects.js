@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import { Link } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { ThemeContext } from "../../App.js";
-import projects from "../../assets/projects";
+import projects from "../../data/projects";
 
 import styles from "./styles";
 
