@@ -5,14 +5,18 @@ const styles = {
       padding: "15px 15px",
         marginBottom: "50px",
     }),
-    borderLeft: (theme) => ({
-        background: theme.palette.purple.main,
+    borderLeft: (theme, isDarkMode) => ({
+        background: isDarkMode ? theme.palette.cobalt.main : theme.palette.purple.main,
         borderRadius: "25px",
         minWidth: "0.5%",
         minHeight: "80%",
         marginTop: "5%",
         marginBottom: "5%",
         top: "50%",
+    }),
+    experienceText: (theme, isDarkMode) => ({
+        color: isDarkMode ? theme.palette.lightGreen.main : theme.palette.purple.main,
+
     }),
     wrapperText: (theme) => ({
         width: "99%",

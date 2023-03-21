@@ -28,6 +28,8 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
     // console.log(isDarkMode)
     //  console.log(theme)
   };
+
+  // console.log(isDarkMode)
   return (
     <Box sx={styles.wrapper(theme, isDarkMode)}>
       <Link

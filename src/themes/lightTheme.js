@@ -18,6 +18,7 @@ const lightTheme = createTheme({
     // },
     slateBlue: {
       main: "#777FEB",
+      secondary: "#646ab0",
     },
     purple: {
       main: "#5222D0",
@@ -30,6 +31,7 @@ const lightTheme = createTheme({
     },
     turquoise: {
       main: "#57dba4",
+      secondary: "#27b783",
     },
     black: {
       main: "#000000",

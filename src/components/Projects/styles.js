@@ -25,7 +25,7 @@ const styles = {
         minHeight: "140px",
     }
   }),
-  inProgressItem: (theme) => ({
+  inProgressItem: (theme, isDarkMode) => ({
     // minHeight: "100%",
     borderRadius: "5px",
     background: "white",
@@ -37,6 +37,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: isDarkMode ? theme.palette.darkBlue.main : "white",
   }),
   inProgressItemWrapper: (theme) => ({
     display: "inline-block",
@@ -44,6 +45,7 @@ const styles = {
   //   justifyContent: "center",
   //   alignItems: "center",
     textAlign: "center",
+    // backgroundColor: "red"
     
   }),
   bodyText: (theme) => ({
@@ -61,7 +63,7 @@ const styles = {
         minHeight: "140px",
     }
   }),
-  activeServerItem: (theme) => ({
+  activeServerItem: (theme, isDarkMode) => ({
     // minHeight: "100%",
     borderRadius: "5px",
     background: "white",
@@ -73,6 +75,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: isDarkMode ? theme.palette.darkBlue.main : "white",
   }),
   activeServerItemWrapper: (theme) => ({
     // borderRadius: "5px",

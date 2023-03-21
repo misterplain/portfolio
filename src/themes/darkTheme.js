@@ -20,6 +20,7 @@ const darkTheme = createTheme({
     },
     purple: {
       main: "#5222D0",
+      secondary: "#3d1027",
     },
     greyGreen: {
       main: "#203239",
@@ -36,6 +37,8 @@ const darkTheme = createTheme({
     },
     darkBlue: {
       main: "#10273d",
+      secondary: "#1b4165",
+
     },
     background: {
       default: "#10273d",
@@ -123,9 +126,9 @@ const darkTheme = createTheme({
         },
         root: {
           borderRadius: "8px",
-          color: "#000",
+          color: "#d4f2e3",
           fontSize: "16px",
-          lineHeight: "20px",
+          lineHeight: "30px",
           fontWeight: 500,
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
             border: "2px solid #777FEB",

@@ -7,12 +7,13 @@ const styles = {
     padding: "15px 15px",
     marginBottom: "50px",
     [theme.breakpoints.up("sm")]: {
+      marginTop: '70px',
       display: "flex",
       flexDirection: "row",
       width: "100%",
     },
     [theme.breakpoints.up("md")]: {
-      marginTop: '40px'
+      marginTop: '70px'
     }
   }),
   textWrapper: (theme, isDarkMode) => ({

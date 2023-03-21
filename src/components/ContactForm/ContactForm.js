@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 
 import Link from "@mui/material/Link";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { useTheme } from "@mui/material/styles";
+import { ThemeContext } from "../../App.js";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -30,7 +32,10 @@ const contactSchema = Yup.object({
     .required("Required"),
 });
 
-const ContactForm = ({isDarkMode}) => {
+const ContactForm = () => {
+  const theme = useTheme();
+  const darkModeContext = useContext(ThemeContext);
+  const isDarkMode = darkModeContext.isDarkMode;
   const [responseMessage, setResponseMessage] = useState("");
   return (
     <Box sx={styles.wrapper}>
@@ -85,7 +90,7 @@ const ContactForm = ({isDarkMode}) => {
                   <FormControlLabel
                     control={
                       <TextField
-                      size="small"
+                     
                         name='name'
                         label='Name'
                         variant='outlined'
@@ -101,7 +106,7 @@ const ContactForm = ({isDarkMode}) => {
                   <FormControlLabel
                     control={
                       <TextField
-                      size="small"
+                  
                         type='textarea'
                         name='email'
                         label='Email address'
@@ -140,7 +145,7 @@ const ContactForm = ({isDarkMode}) => {
                 <Button
                   variant='contained'
                   type='submit'
-                  sx={styles.button}
+                  sx={styles.button(theme, isDarkMode)}
                   disabled={!isValid}
               
                 >

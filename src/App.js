@@ -24,7 +24,7 @@ const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [viewport, setViewport] = useState("");
 
-  console.log("isDarkMode", isDarkMode);
+  // console.log("isDarkMode", isDarkMode);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);

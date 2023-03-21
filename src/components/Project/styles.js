@@ -1,12 +1,14 @@
 const styles = {
-  wrapper: (theme) => ({
+  wrapper: (theme, isDarkMode) => ({
     display: "flex",
     flexDirection: "column",
     padding: "15px 15px",
-    boxShadow: "2px 2px 32px rgba(40, 38, 44, 0.15)",
+    boxShadow: isDarkMode ? "2px 2px 32px rgba(79,176,148, 0.25)" : "2px 2px 32px rgba(40, 38, 44, 0.25)",
     borderRadius: "10px",
     height: "100%",
-    position: 'relative'
+    position: "relative",
+    backgroundColor: isDarkMode ? theme.palette.darkBlue.secondary : "white",
+ 
   }),
   imageWrapper: (theme) => ({
     display: "flex",
@@ -20,6 +22,7 @@ const styles = {
   title: (theme) => ({
     fontWeight: 600,
     textTransform: "uppercase",
+    margin: "10px",
   }),
   pillsWrapper: (theme) => ({
     display: "flex",
@@ -34,7 +37,7 @@ const styles = {
   }),
   description: (theme) => ({
     marginTop: "10px",
-    marginBottom: '40px'
+    marginBottom: "40px",
   }),
   linksWrapper: (theme) => ({
     display: "flex",

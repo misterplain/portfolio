@@ -20,9 +20,9 @@ const Layout = ({ children, toggleDarkMode, isDarkMode }) => {
           
         }}
       >
-        <Header toggleDarkMode={toggleDarkMode}/>
+        <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}/>
         <main>{children}</main>
-        <Footer />
+        <Footer isDarkMode={isDarkMode} />
         {/* <ComponentsTest /> */}
       </Grid>
     </Grid>

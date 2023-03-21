@@ -2,6 +2,8 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
+import { useTheme } from "@mui/material/styles";
+
 import { NavLink } from "react-router-dom";
 import { Link } from "@mui/material";
 
@@ -11,7 +13,8 @@ import { RiLinkedinFill } from "react-icons/ri";
 
 import styles from "./styles";
 
-const Footer = () => {
+const Footer = ({isDarkMode}) => {
+  const theme = useTheme();
   return (
     <Box sx={styles.wrapper}>
       <Box sx={styles.iconsWrapper}>
@@ -22,7 +25,7 @@ const Footer = () => {
           sx={{ textDecoration: "none" }}
         >
           <Box sx={styles.iconWrapper}>
-            <Box sx={styles.icon}>
+            <Box sx={styles.icon(theme, isDarkMode)}>
               {" "}
               <BsGithub />
             </Box>
@@ -37,7 +40,7 @@ const Footer = () => {
           sx={{ textDecoration: "none" }}
         >
           <Box sx={styles.iconWrapper}>
-            <Box sx={styles.icon}>
+            <Box sx={styles.icon(theme, isDarkMode)}>
               <CgMail />
             </Box>
 
@@ -51,7 +54,7 @@ const Footer = () => {
           sx={{ textDecoration: "none" }}
         >
         <Box sx={styles.iconWrapper}>
-          <Box sx={styles.icon}>
+          <Box sx={styles.icon(theme, isDarkMode)}>
             {" "}
             <RiLinkedinFill />
           </Box>
@@ -65,11 +68,11 @@ const Footer = () => {
           to='/projects'
           sx={{ textDecoration: "none" }}
         >
-          <Box sx={styles.link}>Projects</Box>
+          <Box sx={styles.link(theme, isDarkMode)}>Projects</Box>
         </Link>
         <Link component={NavLink} to='/contact' sx={{ textDecoration: "none" }}>
           {" "}
-          <Box sx={styles.link}>Contact</Box>
+          <Box sx={styles.link(theme, isDarkMode)}>Contact</Box>
         </Link>
       </Box>
       {/* <Box sx={styles.captionText}>Web Developer 2023</Box> */}

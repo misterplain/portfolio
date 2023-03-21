@@ -20,19 +20,40 @@ const styles = {
         // height: "30px",
         marginBottom: "30px",
     }),
-    button: (theme) => ({
+    button: (theme, isDarkMode) => ({
+        // fontFamily: "Montserrat, sans-serif",
+        // fontWeight: 500,
+        // fontSize: "16px",
+        // lineHeight: "20px",
+        // textTransform: "capitalize",
+        // color: "white",
+        // background: theme.palette.purple.main,
+        // padding: "12px 20px",
+        // gap: "10px",
+        // borderRadius: "8px",
+        // "&:hover": {
+        //   background: "#646ab0",
+        // },
         fontFamily: "Montserrat, sans-serif",
         fontWeight: 500,
         fontSize: "16px",
         lineHeight: "20px",
         textTransform: "capitalize",
         color: "white",
-        background: theme.palette.purple.main,
+        background: isDarkMode
+          ? theme.palette.cobalt.main
+          : theme.palette.slateBlue.main,
+        // background: "purple",
         padding: "12px 20px",
         gap: "10px",
         borderRadius: "8px",
+        // "&:hover": {
+        //   background: "#646ab0",
+        // },
         "&:hover": {
-          background: "#646ab0",
+          background: isDarkMode
+            ? theme.palette.slateBlue.main
+            : theme.palette.slateBlue.secondary,
         },
     })
 }
