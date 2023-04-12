@@ -67,7 +67,7 @@ const App = () => {
               <Route path={"/projects"} element={<ProjectsScreen />} />
             </Routes>
           </Layout>
-          {/* <Box
+          <Box
             position='fixed'
             bottom={0}
             left={0}
@@ -76,7 +76,7 @@ const App = () => {
             borderRadius={5}
           >
             <Typography>{viewport}</Typography>
-          </Box> */}
+          </Box>
         </ThemeProvider>
       </ThemeContext.Provider>
     </BrowserRouter>

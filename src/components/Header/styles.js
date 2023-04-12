@@ -9,7 +9,7 @@
 const styles = {
   wrapper: (theme, isDarkMode) => ({
     height: "60px",
-  
+
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -39,12 +39,23 @@ const styles = {
   rightWrapper: (theme, isDarkMode) => ({
     display: "flex",
     alignItems: "center",
-    backgroundColor: isDarkMode ? theme.palette.background.main : theme.palette.background.main,
+    backgroundColor: isDarkMode
+      ? theme.palette.background.main
+      : theme.palette.background.main,
     // justifyContent: "flex-start"
+  }),
+  toggle: (theme) => ({
+    marginRight: "5px",
+    [theme.breakpoints.up("sm")]: {
+      marginRight: "20px",
+    },
   }),
   project: (theme) => ({
     fontSize: "16px",
-    marginRight: "20px",
+    marginRight: "10px",
+    [theme.breakpoints.up("sm")]: {
+      marginRight: "20px",
+    },
   }),
 };
 

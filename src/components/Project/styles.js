@@ -3,12 +3,13 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     padding: "15px 15px",
-    boxShadow: isDarkMode ? "2px 2px 32px rgba(79,176,148, 0.25)" : "2px 2px 32px rgba(40, 38, 44, 0.25)",
+    boxShadow: isDarkMode
+      ? "2px 2px 32px rgba(79,176,148, 0.25)"
+      : "2px 2px 32px rgba(40, 38, 44, 0.25)",
     borderRadius: "10px",
     height: "100%",
     position: "relative",
     backgroundColor: isDarkMode ? theme.palette.darkBlue.secondary : "white",
- 
   }),
   imageWrapper: (theme) => ({
     display: "flex",
@@ -18,6 +19,18 @@ const styles = {
     width: "100%",
     height: "auto",
     borderRadius: "10px",
+    [theme.breakpoints.up("xs")]: {
+      minHeight: "235px",
+    },
+    [theme.breakpoints.up("md")]: {
+      minHeight: "185px",
+    },
+    // [theme.breakpoints.up("md")]: {
+    //   minHeight: "500px",
+    // },
+    // [theme.breakpoints.up("sm")]: {
+    //   minHeight: "140px",
+    // },
   }),
   title: (theme) => ({
     fontWeight: 600,

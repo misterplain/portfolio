@@ -43,7 +43,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
         </Typography>
       </Link>
       <Box sx={styles.rightWrapper(theme, isDarkMode)}>
-        <FormGroup
+        <FormGroup 
         >
           <FormControlLabel
             control={
@@ -60,6 +60,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
                 <BsSun style={styles.modeIcon(theme, isDarkMode)} />
               )
             }
+            sx={styles.toggle(theme, isDarkMode)}
           />
         </FormGroup>
         <Link

@@ -22,7 +22,7 @@ const Projects = () => {
       <Typography sx={styles.title} variant='body1' marginBottom>
         Projects
       </Typography>
-      <Grid container sx={styles.noticeWrapper}>
+      {/* <Grid container sx={styles.noticeWrapper}>
         <Grid item xs={8} md={6} sx={styles.inProgressWrapper}>
           <Box sx={styles.inProgressItem(theme, isDarkMode)}>
             <Box sx={styles.inProgressItemWrapper}>
@@ -86,14 +86,23 @@ const Projects = () => {
             </Box>
           </Box>
         </Grid>
-      </Grid>
+      </Grid> */}
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} sm={6} md={4}>
           {" "}
           <Project project={projects[0]} />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} sm={6} md={4}>
           <Project project={projects[1]} />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          sx={{ display: { xs: 'none', md: 'block' } }}
+        >
+          <Project project={projects[2]} />
         </Grid>
       </Grid>
 
