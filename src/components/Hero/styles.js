@@ -7,14 +7,14 @@ const styles = {
     padding: "15px 15px",
     marginBottom: "50px",
     [theme.breakpoints.up("sm")]: {
-      marginTop: '70px',
+      marginTop: "70px",
       display: "flex",
       flexDirection: "row",
       width: "100%",
     },
     [theme.breakpoints.up("md")]: {
-      marginTop: '70px'
-    }
+      marginTop: "70px",
+    },
   }),
   textWrapper: (theme, isDarkMode) => ({
     display: "flex",
@@ -35,6 +35,21 @@ const styles = {
       textAlign: "left",
     },
   }),
+  buttonsWrapper: (theme) => ({
+    marginTop: "30px",
+    display: "flex",
+    justifyContent: "center",
+
+    [theme.breakpoints.up("sm")]: {
+      justifyContent: "flex-start",
+    },
+    [theme.breakpoints.up("md")]: {
+
+    },
+
+  }),
+
+
 
   imageWrapper: (theme) => ({
     display: "flex",

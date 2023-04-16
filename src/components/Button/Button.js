@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import MuiButton from "@mui/material/Button";
 import { ThemeContext } from "../../App.js";
 
-const Button = ({ children }) => {
+const Button = ({ href, download, children }) => {
   const darkModeContext = useContext(ThemeContext);
 
   const styles = {
@@ -18,6 +18,7 @@ const Button = ({ children }) => {
           ? theme.palette.cobalt.main
           : theme.palette.slateBlue.main,
         padding: "10px 15px",
+        margin: "10px",
         gap: "10px",
         borderRadius: "8px",
         "&:hover": {
@@ -35,7 +36,7 @@ const Button = ({ children }) => {
     }),
   };
 
-  return <MuiButton sx={styles.btn}>{children}</MuiButton>;
+  return <MuiButton sx={styles.btn} href={href} download>{children}</MuiButton>;
 };
 
 export default Button;

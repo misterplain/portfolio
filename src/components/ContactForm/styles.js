@@ -3,6 +3,7 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         padding: "15px 15px",
+
     }),
     message: (theme) => ({
         display: "flex",
@@ -13,12 +14,18 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "20px"
+        padding: "10px"
     }),
     formGroup: (theme) => ({
-        width: "80%",
+        width: "95%",
         // height: "30px",
         marginBottom: "30px",
+        [theme.breakpoints.up("sm")]: {
+            width: "80%",
+        },
+        [theme.breakpoints.up("md")]: {
+            width: "70%",
+        },
     }),
     button: (theme, isDarkMode) => ({
         // fontFamily: "Montserrat, sans-serif",

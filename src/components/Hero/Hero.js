@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "../../components/Button/Button";
+import MuiButton from "@mui/material/Button";
 import { NavLink } from "react-router-dom";
 import { Link } from "@mui/material";
 
@@ -27,18 +28,22 @@ const Hero = () => {
           Hi, I'm Patrick, a Barcelona-based web developer and I'm passionate
           about creating engaging, user-friendly applications.
         </Typography>
-        <Link
-          component={NavLink}
-          to='/contact'
-          style={({ isActive }) =>
-            isActive ? { color: "#777FEB" } : undefined
-          }
-          sx={{ textDecoration: "none" }}
-        >
-          <Button isDarkMode={isDarkMode} sx={styles.contact}>
-            Contact Me
+        <Box sx={styles.buttonsWrapper}>
+          {" "}
+          <Link
+            component={NavLink}
+            to='/contact'
+            style={({ isActive }) =>
+              isActive ? { color: "#777FEB" } : undefined
+            }
+            sx={{ textDecoration: "none" }}
+          >
+            <Button isDarkMode={isDarkMode}>Contact Me</Button>
+          </Link>
+          <Button href='./assets/OBrienPatrickCV.pdf' isDarkMode={isDarkMode} download>
+            Download CV
           </Button>
-        </Link>
+        </Box>
       </Box>
       <Box sx={styles.imageWrapper}>
         <Box
