@@ -5,7 +5,7 @@ const styles = {
     alignItems: "center",
     position: "relative",
     padding: "15px 15px",
-    marginBottom: "50px",
+    marginBottom: "30px",
     [theme.breakpoints.up("sm")]: {
       marginTop: "70px",
       display: "flex",
@@ -13,7 +13,14 @@ const styles = {
       width: "100%",
     },
     [theme.breakpoints.up("md")]: {
-      marginTop: "70px",
+      marginTop: "100px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      marginTop: "110px",
+      marginBottom: "70px",
+    },
+    [theme.breakpoints.up("xl")]: {
+      marginTop: "120px",
     },
   }),
   textWrapper: (theme, isDarkMode) => ({
@@ -57,6 +64,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     width: "40%",
+    maxHeight: "100%",
     [theme.breakpoints.up("sm")]: {
       maxHeight: "100%",
       zIndex: 1,
@@ -69,6 +77,7 @@ const styles = {
   }),
   image: (theme) => ({
     width: "100%",
+    height: "auto",
   }),
 };
 
