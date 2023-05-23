@@ -60,8 +60,9 @@ const ContactForm = () => {
 
               // setBool(true);
               const res = await axios.post(
-                "https://activeserver.onrender.com/portfolio/contact",
+                // "https://activeserver.onrender.com/portfolio/contact",
                 // "http://localhost:5000/portfolio/contact",
+                "https://cute-gray-pelican-tux.cyclic.app/portfolio/contact",
                 data
               );
 
