@@ -1,6 +1,9 @@
 import { createTheme } from "@mui/material/styles";
 import createBreakpoints from "@mui/system/createTheme/createBreakpoints";
 
+// import computer from "../assets/computer.jpg";
+import dev_computer from "../assets/dev_computer.png";
+
 const breakpoints = createBreakpoints({});
 
 const darkTheme = createTheme({
@@ -38,7 +41,6 @@ const darkTheme = createTheme({
     darkBlue: {
       main: "#10273d",
       secondary: "#1b4165",
-
     },
     background: {
       default: "#10273d",
@@ -46,6 +48,9 @@ const darkTheme = createTheme({
     black: {
       main: "#000000",
     },
+  },
+  images: {
+    computer: dev_computer,
   },
   typography: {
     h2: {

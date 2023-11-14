@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Active Server",
     description:
-      "To get around the usage limits of the free tier of Render.com, where I am hosting my backend for all projects, I have created one server kept active by various cron-jobs. The server is a Node.js / Express application with MongoDB Atlas as the database.",
+      "To get around the usage limits of the free tier of Cyclic.com, where I am hosting my backend for all projects, I have created one backend server. The server is a Node.js / Express application with MongoDB Atlas as the database.",
     image: activeServer,
     alt: "Active Server",
     githubRepo: "https://github.com/misterplain/activeServer",

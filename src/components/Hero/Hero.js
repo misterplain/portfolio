@@ -11,20 +11,23 @@ import computer from "../../assets/computer.jpg";
 import dev_computer from "../../assets/dev_computer.png";
 import blankScreen from "../../assets/blankScreen.jpg";
 import { ThemeContext } from "../../App.js";
+import { useTheme } from "@mui/material/styles";
 
 const Hero = () => {
+  const theme = useTheme();
+  console.log(theme);
   const darkModeContext = useContext(ThemeContext);
   const isDarkMode = darkModeContext.isDarkMode;
   return (
     <Box sx={styles.wrapper}>
       <Box sx={styles.textWrapper}>
-        <Typography variant='h2' marginBottom>
+        <Typography variant="h2" marginBottom>
           Patrick O'Brien
         </Typography>{" "}
-        <Typography variant='body2' marginBottom>
+        <Typography variant="body2" marginBottom>
           Developer
         </Typography>
-        <Typography variant='body1' sx={styles.aboutMe} marginBottom>
+        <Typography variant="body1" sx={styles.aboutMe} marginBottom>
           Hi, I'm Patrick, a Barcelona-based web developer and I'm passionate
           about creating engaging, user-friendly applications.
         </Typography>
@@ -32,7 +35,7 @@ const Hero = () => {
           {" "}
           <Link
             component={NavLink}
-            to='/contact'
+            to="/contact"
             style={({ isActive }) =>
               isActive ? { color: "#777FEB" } : undefined
             }
@@ -40,17 +43,28 @@ const Hero = () => {
           >
             <Button isDarkMode={isDarkMode}>Contact Me</Button>
           </Link>
-          <Button href='./assets/OBrienPatrickCV.pdf' isDarkMode={isDarkMode} download>
+          <Button
+            href="./assets/OBrienPatrickCV.pdf"
+            isDarkMode={isDarkMode}
+            download
+          >
             Download CV
           </Button>
         </Box>
       </Box>
       <Box sx={styles.imageWrapper}>
-        <Box
+        {/* <Box
           component='img'
           src={isDarkMode ? dev_computer : computer}
           sx={styles.image}
           alt='computer'
+        />
+      </Box> */}
+        <Box
+          component="img"
+          src={theme.images.computer}
+          sx={styles.image}
+          alt="computer"
         />
       </Box>
     </Box>
