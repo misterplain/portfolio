@@ -1,33 +1,40 @@
 import notepad from "../assets/notepad.png";
 import bcnMin from "../assets/bcnMin.png";
 import portfolio from "../assets/portfolio.png";
-import boiler from "../assets/boiler.png";
+import boilerPlate from "../assets/boilerPlate.png";
 import activeServer from "../assets/activeServer.png";
 import fantasticfy from "../assets/fantasticfy.png";
 
-//front end mentor
-//https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ
-
 const projects = [
+  {
+    title: "E-Commerce Boilerplate",
+    description:
+      "A MERN stack e-commerce template designed for scalability. Ideal as a starting off point with Admin functionality, OAuth login, and custom Material UI theming, this clone-ready base ensures rapid deployment with optimized features. Customize to fit your needs. ",
+    image: boilerPlate,
+    alt: "E-Commerce Boilerplate",
+    link: "https://e-commerce-mern-eryu.onrender.com",
+    githubRepo: "https://github.com/misterplain/boilerPlate-MERN",
+    tags: ["MERN Stack", "Material UI", "Passport OAuth", "Cloudinary"],
+  },
   {
     title: "HP Notepad",
     description:
-      "A notepad tool for myself and my colleagues to dynamically create rich-text email templates on the fly. The daily dashboard pulls from rapidAPI's to display forecast, daily horoscope, and 5 relevant news articles. Full stack MERN app - Nodemailer and Node.js / Express used for Contact form ",
+      "A notepad tool for myself and my colleagues to dynamically create rich-text email templates on the fly. The daily dashboard pulls from rapidAPI's to display forecast, daily horoscope, and 5 relevant news articles. Nodemailer and Node.js / Express used for Contact form ",
     image: notepad,
     alt: "HP Notepad",
     link: "https://hpnotepad.onrender.com",
     githubRepo: "https://github.com/misterplain/hpNotePad",
-    tags: ["React", "Material UI", "CKEditor"],
+    tags: ["MERN Stack", "Material UI", "CKEditor", "Redux"],
   },
-  {
-    title: "Active Server",
-    description:
-      "To get around the usage limits of the free tier of Cyclic.com, where I am hosting my backend for all projects, I have created one backend server. The server is a Node.js / Express application with MongoDB Atlas as the database.",
-    image: activeServer,
-    alt: "Active Server",
-    githubRepo: "https://github.com/misterplain/activeServer",
-    tags: ["MongoDB", "Node", "Mongoose"],
-  },
+  // {
+  //   title: "Active Server",
+  //   description:
+  //     "To get around the usage limits of the free tier of Cyclic.com, where I am hosting my backend for all projects, I have created one backend server. The server is a Node.js / Express application with MongoDB Atlas as the database.",
+  //   image: activeServer,
+  //   alt: "Active Server",
+  //   githubRepo: "https://github.com/misterplain/activeServer",
+  //   tags: ["MongoDB", "Node", "Mongoose"],
+  // },
   // {
   //   title: "bcnMinimalista",
   //   description:
@@ -41,12 +48,12 @@ const projects = [
   {
     title: "Fantastic Snowboards",
     description:
-      "A MERN app to display  available snowboard products. The product page contains an image carousel which dynamically changes price and stock information. ",
+      "A MERN app to display available snowboard products. The product page contains an image carousel which dynamically changes price and stock information. ",
     image: fantasticfy,
     alt: "Fantastic Snowboards",
     link: "https://fantasticfy.onrender.com",
     githubRepo: "https://github.com/misterplain/fantasticfy",
-    tags: ["React", "Material UI", "Redux", "Node.js", "MongoDB"],
+    tags: ["MERN Stack", "Material UI", "Redux"],
   },
   {
     title: "Portfolio Site",

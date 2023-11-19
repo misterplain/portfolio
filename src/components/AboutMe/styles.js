@@ -16,7 +16,7 @@ const styles = {
     }),
     experienceText: (theme, isDarkMode) => ({
         color: isDarkMode ? theme.palette.lightGreen.main : theme.palette.purple.main,
-
+marginTop: "15px",
     }),
     wrapperText: (theme) => ({
         width: "99%",
