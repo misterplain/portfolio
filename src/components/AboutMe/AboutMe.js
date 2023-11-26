@@ -33,7 +33,8 @@ const AboutMe = () => {
         <Typography variant="body2" marginBottom>
           To achieve this goal, I'm working on several exciting projects which
           can be found below. Additionally, I'm actively learning about data
-          structures and algorithms, my progress in this can be found
+          structures and algorithms in order to stay competetive and increase my preparedness for a junior web developer position.
+          {/* , my progress in this can be found
           <Link
             href="https://github.com/misterplain/DataStructuresAndAlgorithms"
             target="_blank"
@@ -49,12 +50,12 @@ const AboutMe = () => {
               here
             </Button>
           </Link>
-          .
+          . */}
         </Typography>
-        <Typography variant="body2" marginBottom>
+        {/* <Typography variant="body2" marginBottom>
           In order to stay competitive and increase my preparedness for a junior
           web developer position, I'm dedicated to continuous learning.
-        </Typography>
+        </Typography> */}
         <Typography
           variant="button"
           sx={styles.experienceText(theme, isDarkMode)}
