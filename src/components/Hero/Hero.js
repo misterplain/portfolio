@@ -28,7 +28,7 @@ const Hero = () => {
           Developer
         </Typography>
         <Typography variant="body1" sx={styles.aboutMe} marginBottom>
-          Hi, I'm Patrick, a Barcelona-based web developer and I'm passionate
+          Hi, I'm Patrick, a Barcelona-based Web Developer and I'm passionate
           about creating engaging, user-friendly applications.
         </Typography>
         <Box sx={styles.buttonsWrapper}>

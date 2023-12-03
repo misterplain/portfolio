@@ -8,7 +8,7 @@ import { ThemeContext } from "../../App.js";
 
 import styles from "./styles";
 
-const pills = ["React", "Redux", "Node", "Express", "MongoDB", "Mongoose"];
+const pills = ["HTML", "CSS", "Javascript", "React", "Redux", "Node.js", "Express", "MongoDB", "Mongoose"];
 
 const AboutMe = () => {
   const theme = useTheme();
@@ -25,16 +25,30 @@ const AboutMe = () => {
           About Me
         </Typography>
         <Typography variant="body2" marginBottom>
-          Hi, I'm Patrick, a Barcelona-based web developer originally from the
-          US. Although I'm currently a Customer Service and Sales Rep for the HP
-          Online Store, I'm eager to transition to a Junior Developer role in
-          the tech industry.{" "}
+          I'm a driven developer with a solid foundation in the MERN stack. My
+          coding journey began at NuCamp Full Stack Mobile and Web Development,
+          where I mastered HTML, CSS, JavaScript, React, React Native, Node.js,
+          Mongoose, and MongoDB.
         </Typography>
         <Typography variant="body2" marginBottom>
-          To achieve this goal, I'm working on several exciting projects which
-          can be found below. Additionally, I'm actively learning about data
-          structures and algorithms in order to stay competetive and increase my preparedness for a junior web developer position.
-          {/* , my progress in this can be found
+          To stay competitive and enhance my preparedness for a Web Developer
+          position, I'm actively studying data structures and algorithms, along
+          with fundamental JavaScript and JavaScript frameworks concepts.
+        </Typography>
+        <Typography variant="body2" marginBottom>
+          I thrive on tackling real-world challenges. My most recent project is
+          an e-commerce platform with full admin capabilities. I've brought my
+          skills to life with projects like the HP Notepad, a dynamic template
+          generator that streamlines email communication and boosts team
+          productivity.
+        </Typography>
+        <Typography variant="body2" marginBottom>
+          As a natural problem solver and an effective communicator, I excel in
+          fast-paced, collaborative environments. My goal is to make a
+          significant impact as a Web Developer, leveraging my skills and
+          continuing my programming journey.
+        </Typography>
+        {/* , my progress in this can be found
           <Link
             href="https://github.com/misterplain/DataStructuresAndAlgorithms"
             target="_blank"
@@ -51,11 +65,6 @@ const AboutMe = () => {
             </Button>
           </Link>
           . */}
-        </Typography>
-        {/* <Typography variant="body2" marginBottom>
-          In order to stay competitive and increase my preparedness for a junior
-          web developer position, I'm dedicated to continuous learning.
-        </Typography> */}
         <Typography
           variant="button"
           sx={styles.experienceText(theme, isDarkMode)}
