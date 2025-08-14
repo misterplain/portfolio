@@ -1,26 +1,22 @@
 import React, { useContext } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Link } from "@mui/material";
-import Button from "@mui/material/Button";
 import { useTheme } from "@mui/material/styles";
 import { ThemeContext } from "../../App.js";
-
-import styles from "./styles";
+import styles from "./AboutMe.styles";
 
 const pills = ["HTML", "CSS", "Javascript", "React", "Redux", "Node.js", "Express", "MongoDB", "Mongoose"];
 
+// About section with personal info and tech skills
 const AboutMe = () => {
   const theme = useTheme();
   const darkModeContext = useContext(ThemeContext);
-
   const isDarkMode = darkModeContext.isDarkMode;
 
   return (
     <Box sx={styles.wrapper}>
       <Box sx={styles.borderLeft(theme, isDarkMode)} />
       <Box sx={styles.wrapperText}>
-        {" "}
         <Typography variant="body1" marginBottom sx={{ fontWeight: 700 }}>
           About Me
         </Typography>
@@ -48,23 +44,6 @@ const AboutMe = () => {
           significant impact as a Web Developer, leveraging my skills and
           continuing my programming journey.
         </Typography>
-        {/* , my progress in this can be found
-          <Link
-            href="https://github.com/misterplain/DataStructuresAndAlgorithms"
-            target="_blank"
-            rel="noopener"
-            sx={{ textDecoration: "none", marginLeft: "5px" }}
-          >
-            <Button
-              size="small"
-              variant="outlined"
-              color="secondary"
-              sx={{ padding: "0px" }}
-            >
-              here
-            </Button>
-          </Link>
-          . */}
         <Typography
           variant="button"
           sx={styles.experienceText(theme, isDarkMode)}

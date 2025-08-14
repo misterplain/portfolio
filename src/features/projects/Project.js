@@ -1,19 +1,18 @@
 import React, { useContext } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ButtonSmall from "../Button/ButtonSmall";
+import ButtonSmall from "../../components/common/Button/ButtonSmall";
 import { Link } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { ThemeContext } from "../../App.js";
+import styles from "./Project.styles";
 
-import styles from "./styles";
-
+// Individual project card component
 const Project = ({ project }) => {
   const theme = useTheme();
   const darkModeContext = useContext(ThemeContext);
-  console.log("darkModeContext", darkModeContext);
   const isDarkMode = darkModeContext.isDarkMode;
-  console.log("isDarkMode", isDarkMode);
+
   return (
     <Box sx={styles.wrapper(theme, isDarkMode)}>
       <Box sx={styles.imageWrapper(theme, isDarkMode)}>
@@ -43,7 +42,6 @@ const Project = ({ project }) => {
             <ButtonSmall isDarkMode={isDarkMode}>Live Site</ButtonSmall>
           </Link>
         )}
-
         <Link
           href={project.githubRepo}
           target='_blank'

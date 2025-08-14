@@ -1,12 +1,11 @@
 import React from 'react'
-import ContactForm from '../components/ContactForm/ContactForm'
+import ContactForm from '../features/contact/ContactForm'
 
-
+// Contact page with form
 const ContactScreen = () => {
   return (
-    <><ContactForm/></>
+    <ContactForm />
   )
 }
 
 export default ContactScreen
-

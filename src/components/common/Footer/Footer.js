@@ -1,18 +1,15 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-
 import { useTheme } from "@mui/material/styles";
-
 import { NavLink } from "react-router-dom";
 import { Link } from "@mui/material";
-
 import { BsGithub } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
 import { RiLinkedinFill } from "react-icons/ri";
-
 import styles from "./styles";
 
+// Footer with social links and navigation
 const Footer = ({isDarkMode}) => {
   const theme = useTheme();
   return (
@@ -26,10 +23,8 @@ const Footer = ({isDarkMode}) => {
         >
           <Box sx={styles.iconWrapper}>
             <Box sx={styles.icon(theme, isDarkMode)}>
-              {" "}
               <BsGithub />
             </Box>
-
             <Typography sx={styles.iconText}>Github</Typography>
           </Box>
         </Link>
@@ -43,7 +38,6 @@ const Footer = ({isDarkMode}) => {
             <Box sx={styles.icon(theme, isDarkMode)}>
               <CgMail />
             </Box>
-
             <Typography sx={styles.iconText}>GMail</Typography>
           </Box>
         </Link>
@@ -55,10 +49,8 @@ const Footer = ({isDarkMode}) => {
         >
         <Box sx={styles.iconWrapper}>
           <Box sx={styles.icon(theme, isDarkMode)}>
-            {" "}
             <RiLinkedinFill />
           </Box>
-
           <Typography sx={styles.iconText}>LinkedIn</Typography>
         </Box></Link>
       </Box>
@@ -71,19 +63,11 @@ const Footer = ({isDarkMode}) => {
           <Box sx={styles.link(theme, isDarkMode)}>Projects</Box>
         </Link>
         <Link component={NavLink} to='/contact' sx={{ textDecoration: "none" }}>
-          {" "}
           <Box sx={styles.link(theme, isDarkMode)}>Contact</Box>
         </Link>
       </Box>
-      {/* <Box sx={styles.captionText}>Web Developer 2023</Box> */}
     </Box>
   );
 };
 
 export default Footer;
-
-{
-  /* <BsGithub />
-<CgMail />
-<RiLinkedinFill /> */
-}

@@ -1,35 +1,25 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Button from "../../components/Button/Button";
+import Button from "../Button/Button";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-
-//routing
 import { NavLink } from "react-router-dom";
 import { Link } from "@mui/material";
-//theme
-import { BsGithub } from "react-icons/bs";
 import { RxMoon } from "react-icons/rx";
 import { BsSun } from "react-icons/bs";
-
 import styles from "./styles";
 import { useTheme } from "@mui/material/styles";
-// import { makeStyles } from '@mui/styles';
 
+// Navigation header with dark mode toggle and main nav links
 const Header = ({ toggleDarkMode, isDarkMode }) => {
   const theme = useTheme();
-  // console.log(theme);
 
   const handleChange = () => {
     toggleDarkMode();
-    // console.log("accessed fro header.js");
-    // console.log(isDarkMode)
-    //  console.log(theme)
   };
 
-  // console.log(isDarkMode)
   return (
     <Box sx={styles.wrapper(theme, isDarkMode)}>
       <Link
@@ -43,8 +33,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
         </Typography>
       </Link>
       <Box sx={styles.rightWrapper(theme, isDarkMode)}>
-        <FormGroup 
-        >
+        <FormGroup>
           <FormControlLabel
             control={
               <Switch
@@ -75,7 +64,6 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
             Projects
           </Typography>
         </Link>
-
         <Link
           component={NavLink}
           to='/contact'

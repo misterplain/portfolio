@@ -1,9 +1,8 @@
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import ComponentsTest from "../../componentstest"
 
+// Main layout wrapper that contains header, content, and footer
 const Layout = ({ children, toggleDarkMode, isDarkMode }) => {
   return (
     <Grid
@@ -15,15 +14,10 @@ const Layout = ({ children, toggleDarkMode, isDarkMode }) => {
         xs={12}
         sm={11}
         md={10}
-        sx={{
-          // border: "1px solid blue",
-          
-        }}
       >
         <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}/>
         <main>{children}</main>
         <Footer isDarkMode={isDarkMode} />
-        {/* <ComponentsTest /> */}
       </Grid>
     </Grid>
   );
