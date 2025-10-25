@@ -3,9 +3,19 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { ThemeContext } from "../../App.js";
-import styles from "./AboutMe.styles";
+import styles from "./AboutMe.styles.js";
 
-const pills = ["HTML", "CSS", "Javascript", "React", "Redux", "Node.js", "Express", "MongoDB", "Mongoose"];
+const pills = [
+  "HTML",
+  "CSS",
+  "Javascript",
+  "React",
+  "Redux",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Mongoose",
+];
 
 // About section with personal info and tech skills
 const AboutMe = () => {

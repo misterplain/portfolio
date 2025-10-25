@@ -10,7 +10,7 @@ import TextField from "@mui/material/TextField";
 import FormGroup from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Button from "@mui/material/Button";
-import styles from "./ContactForm.styles";
+import styles from "./ContactForm.styles.js";
 
 const contactSchema = Yup.object({
   name: Yup.string()
@@ -61,22 +61,16 @@ const ContactForm = () => {
             }
           }}
         >
-          {({
-            handleSubmit,
-            handleChange,
-            values,
-            isValid,
-            errors,
-          }) => (
+          {({ handleSubmit, handleChange, values, isValid, errors }) => (
             <form onSubmit={handleSubmit}>
               <Box sx={styles.formWrapper}>
                 <FormGroup sx={styles.formGroup}>
                   <FormControlLabel
                     control={
                       <TextField
-                        name='name'
-                        label='Name'
-                        variant='outlined'
+                        name="name"
+                        label="Name"
+                        variant="outlined"
                         fullWidth
                         value={values.name}
                         onChange={handleChange}
@@ -89,10 +83,10 @@ const ContactForm = () => {
                   <FormControlLabel
                     control={
                       <TextField
-                        type='textarea'
-                        name='email'
-                        label='Email address'
-                        variant='outlined'
+                        type="textarea"
+                        name="email"
+                        label="Email address"
+                        variant="outlined"
                         fullWidth
                         value={values.email}
                         onChange={handleChange}
@@ -106,13 +100,13 @@ const ContactForm = () => {
                     control={
                       <TextField
                         size="small"
-                        type='textarea'
-                        name='message'
-                        label='Enter your message here'
+                        type="textarea"
+                        name="message"
+                        label="Enter your message here"
                         multiline
                         rows={10}
-                        variant='outlined'
-                        color='secondary'
+                        variant="outlined"
+                        color="secondary"
                         fullWidth
                         value={values.message}
                         onChange={handleChange}
@@ -125,8 +119,8 @@ const ContactForm = () => {
                   <Typography>{responseMessage}</Typography>
                 </Box>
                 <Button
-                  variant='contained'
-                  type='submit'
+                  variant="contained"
+                  type="submit"
                   sx={styles.button(theme, isDarkMode)}
                   disabled={!isValid}
                 >

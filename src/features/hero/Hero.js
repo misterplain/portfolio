@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Button from "../../components/common/Button/Button";
+import Button from "../../components/common/Button/Button.js";
 import { NavLink } from "react-router-dom";
 import { Link } from "@mui/material";
-import styles from "./Hero.styles";
+import styles from "./Hero.styles.js";
 import { ThemeContext } from "../../App.js";
 import { useTheme } from "@mui/material/styles";
 

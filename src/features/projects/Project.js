@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ButtonSmall from "../../components/common/Button/ButtonSmall";
+import ButtonSmall from "../../components/common/Button/ButtonSmall.js";
 import { Link } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { ThemeContext } from "../../App.js";
-import styles from "./Project.styles";
+import styles from "./Project.styles.js";
 
 // Individual project card component
 const Project = ({ project }) => {
@@ -18,7 +18,7 @@ const Project = ({ project }) => {
       <Box sx={styles.imageWrapper(theme, isDarkMode)}>
         <Box component={"img"} src={project.image} sx={styles.image} />
       </Box>
-      <Typography sx={styles.title(theme, isDarkMode)} variant='body1'>
+      <Typography sx={styles.title(theme, isDarkMode)} variant="body1">
         {project.title}
       </Typography>
       <Box sx={styles.pillsWrapper(theme, isDarkMode)}>
@@ -28,15 +28,15 @@ const Project = ({ project }) => {
           </Typography>
         ))}
       </Box>
-      <Typography sx={styles.description(theme, isDarkMode)} variant='body2'>
+      <Typography sx={styles.description(theme, isDarkMode)} variant="body2">
         {project.description}
       </Typography>
       <Box sx={styles.linksWrapper(theme, isDarkMode)}>
         {project.link && (
           <Link
             href={project.link}
-            target='_blank'
-            rel='noopener'
+            target="_blank"
+            rel="noopener"
             sx={{ textDecoration: "none" }}
           >
             <ButtonSmall isDarkMode={isDarkMode}>Live Site</ButtonSmall>
@@ -44,8 +44,8 @@ const Project = ({ project }) => {
         )}
         <Link
           href={project.githubRepo}
-          target='_blank'
-          rel='noopener'
+          target="_blank"
+          rel="noopener"
           sx={{ textDecoration: "none", marginLeft: "10px" }}
         >
           <ButtonSmall isDarkMode={isDarkMode}>Github</ButtonSmall>

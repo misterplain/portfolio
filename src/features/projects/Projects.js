@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import Button from "../../components/common/Button/Button";
-import Project from "./Project";
+import Button from "../../components/common/Button/Button.js";
+import Project from "./Project.js";
 import { NavLink } from "react-router-dom";
 import { Link } from "@mui/material";
 import { ThemeContext } from "../../App.js";
-import projects from "../../data/projects";
-import styles from "./Projects.styles";
+import projects from "../../data/projects.js";
+import styles from "./Projects.styles.js";
 
 // Projects showcase section for homepage
 const Projects = () => {
@@ -17,7 +17,7 @@ const Projects = () => {
 
   return (
     <Box sx={styles.wrapper}>
-      <Typography sx={styles.title} variant='body1' marginBottom>
+      <Typography sx={styles.title} variant="body1" marginBottom>
         Projects
       </Typography>
       <Grid container spacing={2}>
@@ -32,7 +32,7 @@ const Projects = () => {
           xs={12}
           sm={6}
           md={4}
-          sx={{ display: { xs: 'none', md: 'block' } }}
+          sx={{ display: { xs: "none", md: "block" } }}
         >
           <Project project={projects[2]} />
         </Grid>
@@ -41,7 +41,7 @@ const Projects = () => {
       <Box sx={styles.buttonWrapper}>
         <Link
           component={NavLink}
-          to='/projects'
+          to="/projects"
           style={({ isActive }) =>
             isActive ? { color: "#777FEB" } : undefined
           }
