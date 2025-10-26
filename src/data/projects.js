@@ -1,8 +1,6 @@
 import notepad from "../assets/notepad.png";
-import bcnMin from "../assets/bcnMin.png";
 import portfolio from "../assets/portfolio.png";
 import boilerPlate from "../assets/boilerPlate.png";
-import activeServer from "../assets/activeServer.png";
 import fantasticfy from "../assets/fantasticfy.png";
 
 const projects = [
@@ -26,25 +24,6 @@ const projects = [
     githubRepo: "https://github.com/misterplain/hpNotePad",
     tags: ["MERN Stack", "Material UI", "CKEditor", "Redux"],
   },
-  // {
-  //   title: "Active Server",
-  //   description:
-  //     "To get around the usage limits of the free tier of Cyclic.com, where I am hosting my backend for all projects, I have created one backend server. The server is a Node.js / Express application with MongoDB Atlas as the database.",
-  //   image: activeServer,
-  //   alt: "Active Server",
-  //   githubRepo: "https://github.com/misterplain/activeServer",
-  //   tags: ["MongoDB", "Node", "Mongoose"],
-  // },
-  // {
-  //   title: "bcnMinimalista",
-  //   description:
-  //     "Full stack MERN app - A platform for Barcelona locals to engage with their community and learn about waste reduction. React-Bootstrap used for UI, Yup and Formik used for form validation, Nodemail used for contact forms, Redux used for state management, JWT user authentication",
-  //   image: bcnMin,
-  //   alt: "bcnMinimalista",
-  //   link: "https://bcnminimalista.onrender.com",
-  //   githubRepo: "https://github.com/misterplain/bcnMin-v4",
-  //   tags: ["React", "Formik", "Yup", "JWT"],
-  // },
   {
     title: "Fantastic Snowboards",
     description:
@@ -65,16 +44,6 @@ const projects = [
     githubRepo: "https://github.com/misterplain/portfolioV2",
     tags: ["React", "Material UI", "Figma"],
   },
-  // {
-  //   title: "boilerPlate",
-  //   description:
-  //     "A full stack MERN Boiler plate with built-in JWT authentication, Redux state management, Nodemailer contact functionality, and React-Bootstrap compatibility",
-  //   image: boiler,
-  //   alt: "boilerPlate",
-  //   link: "https://mernboilerplate.onrender.com",
-  //   githubRepo: "https://github.com/misterplain/boilerPlate-v2",
-  //   tags: ["React", "Node", "MongoDB"],
-  // },
 ];
 
 export default projects;
